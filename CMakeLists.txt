@@ -29,15 +29,19 @@ endif()
 set(SOURCES
     src/main.c
     src/startup.c
+    src/drivers/i2c.c
+    src/devices/bmi160.c
 )
 
 # =========================================================
 # Исполняемый файл (ELF)
 # =========================================================
-add_executable(firmware.elf ${SOURCES})
+add_executable(firmware.elf ${SOURCES}
+    )
 
 # Заголовки
 target_include_directories(firmware.elf PRIVATE
+    ${CMAKE_SOURCE_DIR}/src              # ← чтобы #include "drivers/i2c.h" работал
     ${CMAKE_SOURCE_DIR}/include/cmsis
     ${CMAKE_SOURCE_DIR}/include/stm32
 )

@@ -4,5 +4,6 @@
         "-DCMAKE_TOOLCHAIN_FILE=cmake/arm-none-eabi.cmake"
     ],
     "cmake.buildDirectory": "${workspaceFolder}/build",
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "cortex-debug.variableUseNaturalFormat": false
 }
