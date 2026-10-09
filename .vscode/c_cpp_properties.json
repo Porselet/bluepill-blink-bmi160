@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "includePath": [
+                "${workspaceFolder}/include/cmsis",
+                "${workspaceFolder}/include/stm32",
+                "${workspaceFolder}/src/**"
+            ],
+            "defines": [
+                "STM32F103xB"
+            ],
+            "compilerPath": "C:/SysGCC/arm-eabi/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}

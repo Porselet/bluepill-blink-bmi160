@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (OpenOCD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/firmware.elf",
+            "serverpath": "C:/EmbeddedTools/openocd/bin/openocd.exe",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f1x.cfg"
+            ],
+            "searchDir": [
+                "C:/EmbeddedTools/openocd/openocd/scripts"
+            ],
+            "runToEntryPoint": "reset",
+            "device": "STM32F103C8",
+            "svdFile": "",
+            "preLaunchTask": "Build",
+            "preLaunchCommands": [
+                "monitor reset halt"
+            ],
+            "showDevDebugOutput": "raw"
+        }
+    ]
+}
